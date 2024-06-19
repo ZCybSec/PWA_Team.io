@@ -60,8 +60,8 @@ body {
 }
 
 .menu {
-    overflow-y: auto; /* إضافة شريط التمرير الرأسي فقط عند الضرورة */
-    max-height: 400px; /* تحديد الارتفاع الأقصى للقائمة قبل ظهور شريط التمرير */
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 .menu ul {
@@ -198,12 +198,12 @@ body {
     position: relative;
     width: 100%;
     max-width: 400px;
-    display: flex; /* أضيفت لتجعل العناصر داخل الصندوق يظهرون بشكل أفقي */
-    align-items: center; /* أضيفت لمحاذاة العناصر بشكل أفقي داخل الصندوق */
+    display: flex;
+    align-items: center;
 }
 
 .search-input {
-    flex: 1; /* أضيفت لتمتد الحقل إلى اليمين بقدر الإمكان */
+    flex: 1;
     padding: 10px 20px;
     border: 2px solid #4caf50;
     border-radius: 20px;
@@ -221,7 +221,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     transition: color 0.3s;
-    margin-left: 5px; /* تمت إضافة هذا لفصل الزر عن الحقل بمسافة */
+    margin-left: 5px;
 }
 
 .search-button:hover {
@@ -229,8 +229,8 @@ body {
 }
 
 .member-details {
-    display: none; /* تخفيه بشكل افتراضي */
-    padding-left: 20px; /* مسافة لعرض البيانات بشكل أفضل */
+    display: none;
+    padding-left: 20px;
 }
 
 .toggle-button {
@@ -246,29 +246,6 @@ body {
     color: #81c784;
 }
 
-/* تخصيص شريط التمرير */
-::-webkit-scrollbar {
-    width: 10px;
-    background-color: #121212;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #4caf50;
-    border-radius: 10px;
-    border: 2px solid #1e1e1e;
-    transition: background-color 0.3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #81c784;
-}
-
-/* تخصيص قسم أعضاء الفريق */
 .team-member {
     margin-bottom: 20px;
     transition: transform 0.3s;
@@ -304,7 +281,6 @@ body {
     color: #81c784;
 }
 
-/* تأثير عند تمرير الفأرة على اسم عضو الفريق */
 .team-member-name {
     color: #4caf50;
     transition: color 0.3s, text-shadow 0.3s;
@@ -313,4 +289,39 @@ body {
 .team-member-name:hover {
     color: #81c784;
     text-shadow: 0 0 10px #81c784;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar, .sidebar-right {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content {
+        max-height: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .search-button {
+        font-size: 18px;
+    }
+
+    .social-links a {
+        font-size: 20px;
+    }
+
+    .menu ul li a {
+        font-size: 16px;
+    }
 }
