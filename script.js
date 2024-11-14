@@ -1,4 +1,4 @@
-const symbols = ['\\', '/', '|', '-', '+', '=', '*', '&', '%', '$', '#', '@', '!', '1', '0'];
+const symbols = ['Zayed'];
 const background = document.querySelector('.background');
 
 function createSymbol() {
